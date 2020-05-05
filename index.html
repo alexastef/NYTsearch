@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYT Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/120c3490b3.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <div class="jumbotron jumbotron-fluid rounded">
+            <h1 class="display-4"><i class="far fa-newspaper"></i><strong> New York Times Search</strong></h1>
+        </div>
+    </header>
+    
+    <!-- Search Parameters Panel -->
+    <div class="card" id="search-params">
+        <div class="card-header"><strong>Search Parameters</strong></div>
+        <div class="card-body">
+            <form>
+                <!-- Search Term Row -->
+                <div class="form-group row-1">
+                    <label for="inputTerm" class="col-sm col-form-label">Search Term:</label>
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" id="searchInput">
+                    </div>
+                </div>
+                <!-- Number of Records -->
+                <div class="form-group row-2">
+                    <label for="inputRecords" class="col-sm">Number of Records to Retrieve:</label>
+                    <div class="col-sm-12">
+                        <select class="form-control" id="numRecords">
+                            <option value=1>1</option>
+                            <option value=5 selected>5</option>
+                            <option value=10>10</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Start Year Row -->
+             <div class="form-group row-3">
+                <label for="inputStartYr" class="col-sm col-form-label">Start Year (Optional):</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="startYear">
+                </div>
+            </div>
+            <!-- End Year Row -->
+            <div class="form-group row-4">
+                <label for="inputEndYr" class="col-sm col-form-label">End Year (Optional):</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="endYear">
+                </div>
+            </div>
+
+            
+                <button type="submit" class="btn-search-article btn btn-secondary"><i class="fas fa-search"></i>
+                    Search</button><button type="button" class="btn-clear-results btn btn-secondary"><i class="fas fa-trash"></i>  Clear Results</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Top Articles Card -->
+    <div class="card" id="top-articles">
+        <div class="card-header"><strong>Top Articles</strong></div>
+        <!-- Card Body to hold returned articles-->
+        <div class="card-body" id="returnedArticles">
+            <!-- Returned Articles will go here -->
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src ="script.js"></script>
+
+</div>     
+</body>
+</html>
+
+
+
+
+
+
+
+
